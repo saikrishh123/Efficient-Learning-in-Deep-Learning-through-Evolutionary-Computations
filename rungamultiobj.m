@@ -1,0 +1,16 @@
+
+lb=[-5 -5 -5 -5 -5 -5 -5 -5 -5];
+ub=[5 5 5 5 5 5 5 5 5];
+
+
+opts = optimoptions(@gamultiobj, ...
+    'PopulationSize', 300, ...
+    'MaxGenerations', 50, ...
+    'FunctionTolerance', 1e-8, ...
+    'PlotFcn', {@gaplotpareto,@gaplotscorediversity});
+
+options = optimoptions(@gamultiobj,'PlotFcn',{@gaplotpareto,@gaplotscorediversity});
+
+%rng(0, 'twister');
+[xbest,fval] = gamultiobj(@computeparameters, 9, [], [], [], [], ...
+    lb, ub, [],opts);
