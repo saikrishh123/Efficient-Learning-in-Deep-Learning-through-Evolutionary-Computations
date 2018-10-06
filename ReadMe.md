@@ -32,9 +32,9 @@ e.AlgStructs{1}=e.AlgStructs{1}.runAlg % Training using GA.
 
 Comparison results of training using various algorithm
 
- <img src="./iris_results_tab.png">
+ <img src="./ir_tab.JPG">
 
- <img src="./iris_results_fig.png">
+ <img src="./ir_fig.JPG">
 
 ## Sample Neural Network Model
 
